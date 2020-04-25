@@ -24,6 +24,7 @@
 
 img {
     width: 150px;
+    
 }
 
 #targetNum{
@@ -49,6 +50,17 @@ img {
     color: white;
 }
 
-#redCrystal {
-    
+.scoreBox {
+    background-color: aquamarine;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#currentScore {
+    background-color: aquamarine;
+    width: 200px;
+    text-align: center;
+    font-size: xx-large;
 }
