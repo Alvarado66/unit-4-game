@@ -69,8 +69,8 @@ $(document).ready(function() {
 
 
         if (currentScore === targetNumber) {
-            wins = wins + 1;
-            $("#updateWins").html("Wins: " + wins);
+            userWins = userWins + 1;
+            $("#updateWins").html("Wins: " + userWins);
             targetNumberGen();
             crystalGenerator();
             currentScore = 0;
@@ -97,42 +97,46 @@ $(document).ready(function() {
                 $("#updateWins").html("Wins: " + wins);
             
                 targetNumberGen();
-                randomGemValuesGenerator();
-                yourScoreIs = 0;
-                $("#yourScore").html(yourScoreIs);
+                crystalGenerator();
+                currentScore = 0;
+                $("#updateLoss").html(yourScoreIs);
             }
 
             if (currentScore > targetNumberGen) {
-                losses = losses + 1;
-                $("#losses").html("Losses: " + losses);
-                $("#message").html("YOU LOSE");
-                console.log("YOU LOSE");
-                 //Reset Random Number and Gem Values
-                randomNumberGenerator();
-                randomGemValuesGenerator();
-                yourScoreIs = 0;
+                userLosses = userlosses + 1;
+                $("#updateLosses").html("Losses: " + updateLosses);
+                targetNumberGen();
+                crystalGenerator();
+                currentScore = 0;
                 $("#yourScore").html(yourScoreIs);
             }
     });
 
-     //Purple Diamond
-    $("#purpleGem").on("click", function() {
-        yourScoreIs = yourScoreIs + purpleGemNmbr;
-         console.log(yourScoreIs); //Checking via console
-        $("#yourScore").html(yourScoreIs);
+    // Controls blue crystal//
 
-            if (yourScoreIs === randomNumber) {
-            wins = wins + 1;
-                $("#wins").html("Wins: " + wins);
-                $("#message").html("YOU WIN");
-                console.log("YOU WIN");
-                 //Reset Your Score, Random Number and Gem Values
-                randomNumberGenerator();
-                randomGemValuesGenerator();
-                yourScoreIs = 0;
-                $("#yourScore").html(yourScoreIs);
+    $("#blueCrystal").on("click", function() {
+        currentScore = currentScore + redCrystal;
+        $("#currentScore").html(currentScore);
+
+        if (currentScore === targetNumber) {
+            userWins = userWins + 1;
+            $("#updateWins").html("Wins: " + userWins);
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+    }
+
+            if (currentScore > targetNumber) {
+            userLosses = userLosses + 1;
+            $("#updateLoss").html("Loss: " + userLosses);
+
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
             }
-
+    });
              //When user loses, update losses, update message, reset Random Number and Gem Values
             if (yourScoreIs > randomNumber) {
                 losses = losses + 1;
@@ -147,21 +151,14 @@ $(document).ready(function() {
             }
     });
 
-
-
-
     $("#reset").on("click", function() {
         wins = 0;
         losses = 0;
         yourScoreIs = 0;
-        $("#wins").html("Wins: " + 0);
-        $("#losses").html("Losses: " + 0);
-        $("#yourScore").html(yourScoreIs);
-        $("#message").html();
-        randomNumberGenerator();
-        randomGemValuesGenerator();
+        $("#updateWins").html("Wins: " + 0);
+        $("#updatelosses").html("Losses: " + 0);
+        $("#currentScore").html(yourScoreIs);
+        targetNumberGen();
+        crystalGenerator();
     });
-
-
-
-});
+;
