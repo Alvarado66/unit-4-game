@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     if (currentScore > targetNumber) {
     userLosses = updateLoss + 1;
-    $("#updateLoss").html("updateLoss: " + userlosses);
+    $("#updateLoss").html("Loss: " + userlosses);
 
     targetNumberGen();
     crystalGenerator();
@@ -61,6 +61,7 @@ $(document).ready(function() {
         }
         });
 
+        // This controls the red crystal //
         $("#redCrystal").on("click", function() {
         currentScore = currentScore + redCrystal;
         $("#currentScore").html(currentScore);
@@ -78,7 +79,7 @@ $(document).ready(function() {
 
             if (currentScore > targetNumber) {
             userLosses = userLosses + 1;
-            $("#updateLoss").html("updateLoss: " + userLosses);
+            $("#updateLoss").html("Loss: " + userLosses);
 
             targetNumberGen();
             crystalGenerator();
