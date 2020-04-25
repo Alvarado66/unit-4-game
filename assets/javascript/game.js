@@ -62,11 +62,60 @@ $(document).ready(function() {
         });
 
         // This controls the red crystal //
-        $("#redCrystal").on("click", function() {
+    $("#redCrystal").on("click", function() {
         currentScore = currentScore + redCrystal;
+    $("#currentScore").html(currentScore);
+
+            if (currentScore === targetNumber) {
+            userWins = userWins + 1;
+            $("#updateWins").html("Wins: " + userWins);
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+            }
+
+            if (currentScore > targetNumber) {
+            userLosses = userLosses + 1;
+            $("#updateLoss").html("Loss: " + userLosses);
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+            }
+    });
+
+
+     //Yellow Diamond
+    $("#yellowCrystal").on("click", function() {
+        currentScore = currentScore + yellowCrystal;
+    $("#currentScore").html(currentScore);
+
+            if (currentScore === targetNumber) {
+                userWins = userWins + 1;
+                $("#updateWins").html("Wins: " + wins);
+                targetNumberGen();
+                crystalGenerator();
+                currentScore = 0;
+                $("#currentScore").html(currentScore);
+            }
+
+            if (currentScore > targetNumber) {
+                userLosses = userLosses + 1;
+                $("#updateLosses").html("Losses: " + updateLosses);
+                targetNumberGen();
+                crystalGenerator();
+                currentScore = 0;
+                $("#currentScore").html(currentScore);
+            }
+    });
+
+
+    // Controls blue crystal//
+
+    $("#blueCrystal").on("click", function() {
+        currentScore = currentScore + blueCrystal;
         $("#currentScore").html(currentScore);
-
-
 
         if (currentScore === targetNumber) {
             userWins = userWins + 1;
@@ -87,36 +136,12 @@ $(document).ready(function() {
             $("#currentScore").html(currentScore);
             }
     });
-     //Yellow Diamond
-    $("#yellowCrystal").on("click", function() {
-        currentScore = currentScore + yellowCrystal;
-    $("#currentScore").html(currentScore);
 
-            if (currentScore === targetNumberGen) {
-                userWins = userWins + 1;
-                $("#updateWins").html("Wins: " + wins);
-            
-                targetNumberGen();
-                crystalGenerator();
-                currentScore = 0;
-                $("#updateLoss").html(yourScoreIs);
-            }
-
-            if (currentScore > targetNumberGen) {
-                userLosses = userlosses + 1;
-                $("#updateLosses").html("Losses: " + updateLosses);
-                targetNumberGen();
-                crystalGenerator();
-                currentScore = 0;
-                $("#yourScore").html(yourScoreIs);
-            }
-    });
-
-    // Controls blue crystal//
-
-    $("#blueCrystal").on("click", function() {
-        currentScore = currentScore + redCrystal;
+    $("#greenCrystal").on("click", function() {
+        currentScore = currentScore + greenCrystal;
         $("#currentScore").html(currentScore);
+
+
 
         if (currentScore === targetNumber) {
             userWins = userWins + 1;
