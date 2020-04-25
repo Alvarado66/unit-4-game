@@ -101,7 +101,6 @@ $(document).ready(function() {
                 $("#yourScore").html(yourScoreIs);
             }
 
-             //When user loses, update losses, update message, reset Random Number and Gem Values
             if (currentScore > targetNumberGen) {
                 losses = losses + 1;
                 $("#losses").html("Losses: " + losses);
