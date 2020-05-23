@@ -5,6 +5,9 @@ $(document).ready(function() {
     let blueCrystal = 0;
     let yellowCrystal = 0;
     let greenCrystal = 0;
+    let yourScoreIs = 0;
+    let randomNumber = 0;
+
 
     function targetNumberGen() {
         targetNumber = Math.floor(Math.random() * (120 - 19 + 1) ) + 19;
@@ -102,7 +105,7 @@ $(document).ready(function() {
 
             if (currentScore > targetNumber) {
                 userLosses = userLosses + 1;
-                $("#updateLosses").html("Losses: " + updateLosses);
+                $("#updateLosses").html("Losses: " + userLosses);
                 targetNumberGen();
                 crystalGenerator();
                 currentScore = 0;
@@ -181,7 +184,7 @@ $(document).ready(function() {
         losses = 0;
         yourScoreIs = 0;
         $("#updateWins").html("Wins: " + 0);
-        $("#updatelosses").html("Losses: " + 0);
+        $("#updateLosses").html("Losses: " + 0);
         $("#currentScore").html(yourScoreIs);
         targetNumberGen();
         crystalGenerator();
