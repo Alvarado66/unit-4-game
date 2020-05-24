@@ -96,7 +96,7 @@ $(document).ready(function() {
 
             if (currentScore === targetNumber) {
                 userWins = userWins + 1;
-                $("#updateWins").html("Wins: " + wins);
+                $("#updateWins").html("Wins: " + userWins);
                 targetNumberGen();
                 crystalGenerator();
                 currentScore = 0;
