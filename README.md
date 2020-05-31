@@ -1,6 +1,8 @@
 # unit-4-game
 
-## Can You Match The Numbers?
+## GAME LINK: https://alvarado66.github.io/unit-4-game/
+
+### Can You Match The Numbers?
   In this game, you will be given a number at random from
   the start. Your job is to figure out what the value is 
   for each of the four crystals (also a random value) and 
