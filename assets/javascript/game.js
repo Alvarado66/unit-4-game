@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     let targetNumber = 0;
     let redCrystal = 0;
@@ -10,21 +10,21 @@ $(document).ready(function() {
 
 
     function targetNumberGen() {
-        targetNumber = Math.floor(Math.random() * (120 - 19 + 1) ) + 19;
+        targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         console.log(" Number returned is " + targetNumber);
 
         $('#targetNum').html(targetNumber);
     }
 
     function crystalGenerator() {
-        
-     redCrystal = Math.floor(Math.random() * 12) + 1; 
 
-     blueCrystal = Math.floor(Math.random() * 12) + 1; 
+        redCrystal = Math.floor(Math.random() * 12) + 1;
 
-     yellowCrystal = Math.floor(Math.random() * 12) + 1; 
+        blueCrystal = Math.floor(Math.random() * 12) + 1;
 
-     greenCrystal = Math.floor(Math.random() * 12) + 1; 
+        yellowCrystal = Math.floor(Math.random() * 12) + 1;
+
+        greenCrystal = Math.floor(Math.random() * 12) + 1;
     }
 
 
@@ -36,87 +36,87 @@ $(document).ready(function() {
     let userLosses = 0;
 
 
-    $("#redCrystals").on("click", function() {
-    currentScore = currentScore + redCrystal;
-    $("#currentScore").html(currentScore);
-
-
-    if (currentScore === targetNumber) {
-        userWins = userWins + 1;
-    $("#updateWins").html("updateWins: " + userWins);
-
-    targetNumberGen();
-    crystalGenerator();
-    currentScore = 0;
-    $("#currentScore").html(currentScore);
-    }
-
-
-    if (currentScore > targetNumber) {
-    userLosses = updateLoss + 1;
-    $("#updateLoss").html("Loss: " + userlosses);
-
-    targetNumberGen();
-    crystalGenerator();
-
-        currentScore = 0;
-        $("#currentScore").html(currentScore);
-        }
-        });
-
-        // This controls the red crystal //
-    $("#redCrystal").on("click", function() {
+    $("#redCrystals").on("click", function () {
         currentScore = currentScore + redCrystal;
-    $("#currentScore").html(currentScore);
+        $("#currentScore").html(currentScore);
 
-            if (currentScore === targetNumber) {
+
+        if (currentScore === targetNumber) {
+            userWins = userWins + 1;
+            $("#updateWins").html("updateWins: " + userWins);
+
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+        }
+
+
+        if (currentScore > targetNumber) {
+            userLosses = updateLoss + 1;
+            $("#updateLoss").html("Loss: " + userlosses);
+
+            targetNumberGen();
+            crystalGenerator();
+
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+        }
+    });
+
+    // This controls the red crystal //
+    $("#redCrystal").on("click", function () {
+        currentScore = currentScore + redCrystal;
+        $("#currentScore").html(currentScore);
+
+        if (currentScore === targetNumber) {
             userWins = userWins + 1;
             $("#updateWins").html("Wins: " + userWins);
             targetNumberGen();
             crystalGenerator();
             currentScore = 0;
             $("#currentScore").html(currentScore);
-            }
+        }
 
-            if (currentScore > targetNumber) {
+        if (currentScore > targetNumber) {
             userLosses = userLosses + 1;
             $("#updateLoss").html("Loss: " + userLosses);
             targetNumberGen();
             crystalGenerator();
             currentScore = 0;
             $("#currentScore").html(currentScore);
-            }
+        }
     });
 
 
-     //Yellow Diamond
-    $("#yellowCrystal").on("click", function() {
+    //Yellow Diamond
+    $("#yellowCrystal").on("click", function () {
         currentScore = currentScore + yellowCrystal;
-    $("#currentScore").html(currentScore);
+        $("#currentScore").html(currentScore);
 
-            if (currentScore === targetNumber) {
-                userWins = userWins + 1;
-                $("#updateWins").html("Wins: " + userWins);
-                targetNumberGen();
-                crystalGenerator();
-                currentScore = 0;
-                $("#currentScore").html(currentScore);
-            }
+        if (currentScore === targetNumber) {
+            userWins = userWins + 1;
+            $("#updateWins").html("Wins: " + userWins);
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+        }
 
-            if (currentScore > targetNumber) {
-                userLosses = userLosses + 1;
-                $("#updateLosses").html("Losses: " + userLosses);
-                targetNumberGen();
-                crystalGenerator();
-                currentScore = 0;
-                $("#currentScore").html(currentScore);
-            }
+        if (currentScore > targetNumber) {
+            userLosses = userLosses + 1;
+            $("#updateLosses").html("Losses: " + userLosses);
+            targetNumberGen();
+            crystalGenerator();
+            currentScore = 0;
+            $("#currentScore").html(currentScore);
+        }
     });
 
 
     // Controls blue crystal//
 
-    $("#blueCrystal").on("click", function() {
+    $("#blueCrystal").on("click", function () {
         currentScore = currentScore + blueCrystal;
         $("#currentScore").html(currentScore);
 
@@ -127,9 +127,9 @@ $(document).ready(function() {
             crystalGenerator();
             currentScore = 0;
             $("#currentScore").html(currentScore);
-    }
+        }
 
-            if (currentScore > targetNumber) {
+        if (currentScore > targetNumber) {
             userLosses = userLosses + 1;
             $("#updateLoss").html("Loss: " + userLosses);
 
@@ -137,10 +137,10 @@ $(document).ready(function() {
             crystalGenerator();
             currentScore = 0;
             $("#currentScore").html(currentScore);
-            }
+        }
     });
 
-    $("#greenCrystal").on("click", function() {
+    $("#greenCrystal").on("click", function () {
         currentScore = currentScore + greenCrystal;
         $("#currentScore").html(currentScore);
 
@@ -153,9 +153,9 @@ $(document).ready(function() {
             crystalGenerator();
             currentScore = 0;
             $("#currentScore").html(currentScore);
-    }
+        }
 
-            if (currentScore > targetNumber) {
+        if (currentScore > targetNumber) {
             userLosses = userLosses + 1;
             $("#updateLoss").html("Loss: " + userLosses);
 
@@ -163,30 +163,30 @@ $(document).ready(function() {
             crystalGenerator();
             currentScore = 0;
             $("#currentScore").html(currentScore);
-            }
+        }
     });
-             //When user loses, update losses, update message, reset Random Number and Gem Values
-            if (yourScoreIs > randomNumber) {
-                losses = losses + 1;
-                $("#losses").html("Losses: " + losses);
-                $("#message").html("YOU LOSE");
-                console.log("YOU LOSE");
-                 //Reset Random Number and Gem Values
-                randomNumberGenerator();
-                randomGemValuesGenerator();
-            yourScoreIs = 0;
-                $("#yourScore").html(yourScoreIs);
-            }
-    });
-
-    $("#reset").on("click", function() {
-        wins = 0;
-        losses = 0;
+    //When user loses, update losses, update message, reset Random Number and Gem Values
+    if (yourScoreIs > randomNumber) {
+        losses = losses + 1;
+        $("#losses").html("Losses: " + losses);
+        $("#message").html("YOU LOSE");
+        console.log("YOU LOSE");
+        //Reset Random Number and Gem Values
+        randomNumberGenerator();
+        randomGemValuesGenerator();
         yourScoreIs = 0;
-        $("#updateWins").html("Wins: " + 0);
-        $("#updateLosses").html("Losses: " + 0);
-        $("#currentScore").html(yourScoreIs);
-        targetNumberGen();
-        crystalGenerator();
-    });
+        $("#yourScore").html(yourScoreIs);
+    }
+});
+
+$("#reset").on("click", function () {
+    userWins = 0;
+    userLosses = 0;
+    yourScoreIs = 0;
+    $("#updateWins").html("Wins: " + 0);
+    $("#updateLosses").html("Losses: " + 0);
+    $("#currentScore").html(yourScoreIs);
+    targetNumberGen();
+    crystalGenerator();
+});
 ;

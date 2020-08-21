@@ -1,12 +1,14 @@
 
 .mainHeader {
-    width: 300px;
+    width: 50%;
     border: 15px solid rgb(50, 250, 250);
     padding: 20px;
-    margin: 10px;
+    margin: auto;
     background-color: tan;
     font-family: fantasy;
-    font-size: xx-large
+    font-size: xx-large;
+    text-align: center;
+
 }   
 
 .instructBox {
