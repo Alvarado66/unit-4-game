@@ -34,7 +34,7 @@ img {
     background-color: tan;
     border: 10px solid rgb(50,250,250);
     padding: 25px;
-    margin: inherit;
+    margin: auto;
     text-align: center;
     font-size: xx-large;
     font-family: fantasy;
@@ -59,15 +59,22 @@ img {
 
 .scoreBox {
     background-color: aquamarine;
-    width: 200px;
-    height: 40px;
+    width: 350px;
+    height: 55px;
+    margin: auto;
     text-align: center;
     font-size: xx-large;
 }
 
+.crystalsRow {
+    margin: auto;
+    width: 40%;
+}
+
 #currentScore {
     background-color: aquamarine;
-    width: 200px;
+    width: 350px;
     text-align: center;
     font-size: xx-large;
+    margin: auto;
 }
