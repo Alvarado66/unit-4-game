@@ -12,10 +12,10 @@
 }   
 
 .instructBox {
-    width: 675px;
+    width: 50%;
     border: 10px solid rgb(50, 250, 250);
     padding: 10px;
-    margin: 10px;
+    margin: auto;
     background-color: black;
     font-family: fantasy;
     font-size: x-large;
@@ -34,22 +34,27 @@ img {
     background-color: tan;
     border: 10px solid rgb(50,250,250);
     padding: 25px;
+    margin: inherit;
     text-align: center;
     font-size: xx-large;
     font-family: fantasy;
+    display: grid;
+    grid-auto-rows: 80px;
 }   
 
 
 .userWL {
     background-color: rgb(218, 12, 12);
-    width: 300px;
+    width: 50%;
     height: 100px;
+    margin: auto;
     border: 15px solid rgb(50,250,250);
     text-align: center;
     font-family: fantasy;
     line-height: 40px;
     font-size: x-large;
     color: white;
+
 }
 
 .scoreBox {
