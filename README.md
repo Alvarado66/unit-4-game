@@ -18,3 +18,6 @@
     quickly became more like a pattern and what to do with said numbers
     after the player matches the target number that will display
     their "Wins" or "Losses."
+### Screen Shot
+
+<img width="294" alt="Screen Shot 2020-06-01 at 9 49 36 PM" src="https://user-images.githubusercontent.com/60458491/90945807-3aba4500-e3f5-11ea-9d93-e8e4f77c1da9.png">
